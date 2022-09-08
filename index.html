@@ -1,16 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Origlia Billy-Berclau/Billy-Berclau Kick boxing - K1 Rules - Full Contact</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Team Origlia Billy-Berclau/Billy-Berclau Kick boxing - K1 Rules - Full
+      Contact
+    </title>
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
-    <script type="application/javascript" src="./assets/js/bootstrap.min.js"></script>
-    <script type="application/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
-</head>
-<body>
-    
-</body>
+    <script
+      type="application/javascript"
+      src="./assets/js/bootstrap.min.js"
+    ></script>
+    <script
+      type="application/javascript"
+      src="./assets/js/jquery-3.6.0.min.js"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/785308f487.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="nav-placeholder"></div>
+    <script>
+      $(function () {
+        $("#nav-placeholder").load("nav.html");
+
+        const documentEl = $(document),
+          fadeElem = $(".fade-scroll");
+
+        documentEl.on("scroll", function () {
+          const currScrollPos = documentEl.scrollTop();
+          fadeElem.each(function () {
+            const $this = $(this),
+              elemOffSetTop = $this.offset().top;
+            if (currScrollPos > elemOffSetTop)
+              $this.css("opacity", 1 - (currScrollPos - elemOffSetTop) / 400);
+          });
+        });
+      });
+
+      const myModal = document.getElementById("modal");
+      const myInput = document.getElementById("modal");
+
+      myModal.addEventListener("shown.bs.modal", function () {
+        myInput.focus();
+      });
+    </script>
+  </body>
 </html>
