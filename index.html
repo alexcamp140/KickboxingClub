@@ -18,13 +18,37 @@
       type="application/javascript"
       src="./assets/js/jquery-3.6.0.min.js"
     ></script>
-    <script
-      src="https://kit.fontawesome.com/785308f487.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
-    <div id="nav-placeholder"></div>
+    <div id="nav-placeholder">
+    </div>
+    <div class="container container-fluid mw-100 p-0">
+      <div class="row">
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./images/box-sport-men-training-min.png"
+                class="img-fluid d-block w-100 fade-scroll"
+                alt="Team Origlia Kick boxing K1 Rules Full contact"
+              />
+              <div class="carousel-caption d-none d-sm-block">
+                <p>
+                  En boxe, pour réussir, il faut savoir sacrifier ce que tu es
+                  au bénéfice de ce que tu veux devenir
+                </p>
+                <p>- Julien Lorcy - Champion du monde 1972 -</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script>
       $(function () {
         $("#nav-placeholder").load("nav.html");
