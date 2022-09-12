@@ -18,10 +18,10 @@
       type="application/javascript"
       src="./assets/js/jquery-3.6.0.min.js"
     ></script>
+    <script src="https://kit.fontawesome.com/785308f487.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div id="nav-placeholder">
-    </div>
+    <div id="nav-placeholder"></div>
     <div class="container container-fluid mw-100 p-0">
       <div class="row">
         <div
@@ -48,10 +48,14 @@
         </div>
       </div>
     </div>
+    <div id="legal"></div>
+    <div id="footer"></div>
 
     <script>
       $(function () {
         $("#nav-placeholder").load("nav.html");
+        $("#footer").load("footer.html");
+        $("#legal").load("legal.html");
 
         const documentEl = $(document),
           fadeElem = $(".fade-scroll");
